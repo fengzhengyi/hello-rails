@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root "articles#index"
   # Defines the root path route ("/")
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
